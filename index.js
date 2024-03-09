@@ -24,8 +24,7 @@ const bcrypt=require('bcryptjs')
 // app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 const corsOptions = {
-   // origin: 'http://localhost:3001',
-   origin: '*',   //allow request from any origin
+    origin: 'http://localhost:3000',
     credentials: true, // <-- Add this line
     
   }
