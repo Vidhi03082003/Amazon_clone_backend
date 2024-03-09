@@ -17,11 +17,11 @@ const bcrypt=require('bcryptjs')
 
 
 //deploy on github
-const path=require('path')
+// const path=require('path')
 
 //static files access deploy on github
 //app.use(express.static(path.join(__dirname,'./client/build')))
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+// app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 const corsOptions = {
    // origin: 'http://localhost:3001',
@@ -32,12 +32,12 @@ const corsOptions = {
   
   app.use(cors(corsOptions));
 
-  app.options('*', (req, res) => {
-    res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Credentials', true);
-    res.send();
-  });
+//   app.options('*', (req, res) => {
+//     res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type');
+//     res.header('Access-Control-Allow-Credentials', true);
+//     res.send();
+//   });
 const jwt=require('jsonwebtoken');
 require('dotenv').config();
 
@@ -247,9 +247,9 @@ app.get('/logout',(req,res)=>{
 //     res.sendFile(path.join(__dirname,'./client/build/index.html'))
 // })
 
-app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
-});
+// app.get('*', function(req, res) {
+//     res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+// });
 
 
 
