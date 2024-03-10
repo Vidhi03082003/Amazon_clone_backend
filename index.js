@@ -23,13 +23,14 @@ const bcrypt=require('bcryptjs')
 //app.use(express.static(path.join(__dirname,'./client/build')))
 // app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
-const corsOptions = {
-    origin: 'http://localhost:3000',
-    credentials: true, // <-- Add this line
+// const corsOptions = {
+//     origin: 'https://amazon-clone-backend-2-b6qf.onrender.com',
+//     credentials: true, // <-- Add this line
     
-  }
+//   }
   
-  app.use(cors(corsOptions));
+ // app.use(cors(corsOptions));
+ app.use(cors());
 
 //   app.options('*', (req, res) => {
 //     res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
